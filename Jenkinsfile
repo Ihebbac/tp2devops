@@ -5,15 +5,15 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-        IMAGE_NAME_SERVER = '[username]/mern-server'
-        IMAGE_NAME_CLIENT = '[username]/mern-client'
+        IMAGE_NAME_SERVER = 'ihebbac/mern-app-main-server'
+        IMAGE_NAME_CLIENT = 'ihebbac/mern-app-main-client'
     }
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'git@gitlab.com/project.git',
-                    credentialsId: 'Gitlab_ssh'
+                    url: 'git@github.com:Ihebbac/tp2devops.git',
+                    credentialsId: 'GitHub_ssh'
             }
         }
         stage('Build Server Image') {
