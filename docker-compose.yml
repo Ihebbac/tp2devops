@@ -5,7 +5,7 @@ services:
     image: mongo  
     container_name: mongodb  
     networks:
-      - mern-network  
+      - mern-network1  
   server:
     build:
       context: ./server  
@@ -13,7 +13,7 @@ services:
     ports:
       - "5000:5000"  
     networks:
-      - mern-network  
+      - mern-network1  
     depends_on:
       - mongodb  
     environment:
@@ -27,7 +27,7 @@ services:
     ports:
       - "3000:3000"  
     networks:
-      - mern-network  
+      - mern-network1  
     depends_on:
       - server  
 
