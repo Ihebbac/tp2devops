@@ -10,7 +10,6 @@ RUN npm install
 COPY . .
 
 EXPOSE 5000
-
-# ENV MONGO_URI=mongodb://localhost:27017/mern-db
+ENV MONGO_URI=mongodb+srv://ihebbaccouch1999:IEhlPE6OnMjWcneW@cluster0.luagi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 CMD ["npm", "start"]
