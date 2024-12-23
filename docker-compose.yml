@@ -17,7 +17,7 @@ services:
     depends_on:
       - mongodb  
     environment:
-      - MONGO_URI=mongodb://mongodb:27017/mongo
+      - MONGO_URI=mongodb+srv://ihebbaccouch1999:IEhlPE6OnMjWcneW@cluster0.luagi.mongodb.net/devops?retryWrites=true&w=majority
       - PORT=5000
 
   client:
